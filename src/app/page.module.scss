@@ -1,0 +1,35 @@
+.wrapper {
+  margin: 20px 200px;
+  text-align: center;
+
+  input {
+    height: 40px;
+    width: 80%;
+
+    &::placeholder {
+        text-align: center; 
+    }
+
+  }
+  .addButton {
+    margin-left: 10px;
+    height: 47px;
+    width: 47px;
+  }
+  ul {
+    border: 3px solid gray;
+    border-radius: 10px;
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding-top: 10px;
+        border-bottom: 1px solid black;
+        .deleteButton {
+            margin-right: 40px;
+        }
+    }
+  }
+
+}
