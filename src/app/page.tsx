@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import styles from "./page.module.scss";
-
+import TodoItem from "./components/TodoItem/TodoItem";
 export default function Home() {
   const [text, setText] = useState<string>("")
   const [todos, setTodos] = useState<string[]>([])
@@ -19,7 +19,7 @@ export default function Home() {
           <ul>
             {todos.map((todo, index) => {
               return <div key={index}>
-                <li>{todo}<button className={styles.deleteButton} onClick={() => setTodos((todos) => todos.filter((_, i) => i !== index))}>Delete</button></li>
+                <TodoItem key={index} todo={todo} onDelete={() => setTodos((todos) => todos.filter((_, i) => i !== index))}/>
               </div>
             })}
           </ul>
